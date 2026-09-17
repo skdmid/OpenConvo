@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenConvo - Voice Meetings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="page">
+    <header>
+      <h1>OpenConvo</h1>
+      <p>Simple browser voice meetings.</p>
+      <hr>
+    </header>
+
+    <main>
+      <section id="home-panel" aria-labelledby="welcome-heading">
+        <h2 id="welcome-heading">Voice Meeting</h2>
+        <p>Enter your details to start or join a meeting.</p>
+        <form id="meeting-form">
+          <table>
+            <tr><td><label for="name">Your name:</label></td><td><input id="name" name="name" type="text" maxlength="40" autocomplete="name" required></td></tr>
+            <tr><td><label for="room-code">Meeting code:</label></td><td><input id="room-code" name="room-code" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off"> <small>(four digits)</small></td></tr>
+            <tr><td></td><td><button id="join-button" type="submit">Join Meeting</button> <button id="start-button" type="button">Start a Meeting</button></td></tr>
+          </table>
+        </form>
+        <p id="form-message" class="message" aria-live="polite"></p>
+      </section>
+
+      <section id="call-panel" hidden aria-labelledby="meeting-heading">
+        <h2 id="meeting-heading">Meeting</h2>
+        <p>Your meeting code: <strong id="active-code"></strong></p>
+        <p id="call-status" class="message" aria-live="polite">Connecting microphone...</p>
+        <h3>People in this meeting</h3>
+        <ul id="participant-list"></ul>
+        <p><button id="mute-button" type="button">Mute Microphone</button> <button id="leave-button" type="button">Leave Meeting</button></p>
+        <div id="remote-audio" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <footer>
+      <hr>
+      <p>Made by Satyam Dey<br>Instagram: @satyamdey06<br>Email: satyamdey2006@gmail.com</p>
+    </footer>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
