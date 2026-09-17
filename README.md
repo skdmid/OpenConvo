@@ -21,7 +21,7 @@ OpenConvo uses **WebRTC** to send high-quality voice audio directly between part
 - **Real-time voice communication**
 - **Multi-person voice meetings**
 - **Mute and unmute microphone**
-- **Simple black-and-white design**
+- **Simple CSS used for wide support for devices**
 
 ## Built With
 
@@ -29,7 +29,7 @@ OpenConvo uses **WebRTC** to send high-quality voice audio directly between part
 - **Express**
 - **Socket.io**
 - **WebRTC**
-- **Vanilla HTML, CSS, and JavaScript**
+- **HTML, CSS and JavaScript**
 
 ## Credits
 
